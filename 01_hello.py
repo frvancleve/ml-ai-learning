@@ -2,22 +2,28 @@ print("Hello, world!")
 
 # This is a comment. Python ignores anything after the # on a line.
 # Comments are for humans (you and future you).
+while True:
+    name = input("What is your name? ")
+    age = int(input("How old are you? "))
+    height_m = float(input("What is your height in meters? "))
+    major = input("What is your major? ")
+    job_title = input("What is your job title? ")
 
-name = input("What is your name? ")
-age = int(input("How old are you? "))
-height_m = float(input("What is your height in meters? "))
-major = input("What is your major? ")
-job_title = input("What is your job title? ")
+    print(f"My name is {name}")
+    print(f"I am {age} years old")
+    print(f"My height is {height_m:.2f} meters")
+    print(f"My major is {major}")
+    print(f"My job title is {job_title}")
 
-print(f"My name is {name}")
-print(f"I am {age} years old")
-print(f"My height is {height_m:.2f} meters")
-print(f"My major is {major}")
-print(f"My job title is {job_title}")
+    print()
 
-print()
+    if age > 40:
+        print("You've got a ton of real-world experience!")
+    else:
+        print("You're building a strong foundation early on!")
 
-if age > 40:
-    print("You've got a ton of real-world experience!")
-else:
-    print("You're building a strong foundation early on!")
+    again = input("Would you like to run the program again? (yes/no): ").strip().lower()
+
+    if again != "yes" and again != "y":
+        print("Thanks for using the program. Goodbye!")
+        break
